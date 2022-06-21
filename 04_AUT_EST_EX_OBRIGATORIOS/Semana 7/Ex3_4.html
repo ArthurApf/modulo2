@@ -1,0 +1,52 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+        
+        <script>
+            
+            function valor()
+            {
+                let n1 = parseFloat(document.getElementById('n1').value);
+                let n2 = document.getElementById('time').value;
+                
+                if(n2 == 'day')
+                {
+                    document.getElementById('res').value = (n1*200)
+                    if(n1>50)
+                    {
+                    document.getElementById(`res`).value =  (n1*120)  
+                    }
+                }
+                
+                if(n2 == 'night')
+                {
+                    document.getElementById('res').value = (n1*100)
+                    if(n1>50)
+                    {
+                    document.getElementById(`res`).value =  (n1*80)   
+                    }
+                }
+            
+            }
+            
+        </script>
+        
+</head>
+<body>
+        
+        <input type="number" id="n1"/>
+        <br>
+        <br>
+    
+        <select id="time">
+            <option value="day">Diurno</option>
+            <option value="night">Noturno</option>
+        </select>
+        
+        <br>
+        <br>
+
+        <button onclick="valor();">Levantamento</button>
+        <input type="number" id="res"/>
+        
+</body>
