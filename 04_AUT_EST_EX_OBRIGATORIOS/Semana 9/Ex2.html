@@ -1,0 +1,28 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    
+    <script>
+
+        function calc(){
+            let n1 =document.getElementById("n1").value
+            let a = n1.split('')
+            let s = 0
+            for (let i = 0; i <= a.length -1; i++){
+                s += parseInt(a[i])
+            }
+            document.getElementById("res").innerHTML=`A soma dos números é de: ${s}`
+        }
+
+    </script>
+
+</head>
+
+<body>
+   
+    Insira um número inteiro e positivo: <input type="number" id="n1">
+    <button onclick="calc()">=</button>
+    <br>
+    <label id="res"></label>
+    
+</body>

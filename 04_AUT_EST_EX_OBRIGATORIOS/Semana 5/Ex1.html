@@ -1,0 +1,71 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+        
+        <script>
+            
+            function calcula()
+            {
+                let n1 = parseFloat(document.getElementById('n1').value);
+                let n2 = parseFloat(document.getElementById('n2').value);
+                let n3 = document.getElementById('sinais').value;
+                
+                if(n3 == '+')
+                {
+                    document.getElementById('res').value = n1+n2
+                }
+                
+                if(n3 == '-')
+                {
+                    document.getElementById('res').value = n1-n2
+                }
+                
+                if(n3 == '/')
+                {
+                    document.getElementById('res').value = n1/n2
+                }
+                
+                if(n3 == 'X')
+                {
+                    document.getElementById('res').value = n1*n2
+                }
+
+                if(n3 == '%')
+                {
+                    document.getElementById('res').value = n1%n2
+                }
+
+                if(n3 == '//')
+                {
+                    document.getElementById('res').value = (n1/n2)/(n1/n2)
+                }
+            }
+            
+        </script>
+        
+</head>
+<body>
+        
+        <input type="number" id="n1"/>
+        <br>
+        <br>
+        <input type="number" id="n2"/>
+        <br>
+        <br>
+
+        <select id="sinais">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+            <option value="%">%</option>
+            <option value="//">//</option>
+        </select>
+        
+        <br>
+        <br>
+
+        <button onclick="calcula();">=</button>
+        <input type="number" id="res"/>
+        
+</body>

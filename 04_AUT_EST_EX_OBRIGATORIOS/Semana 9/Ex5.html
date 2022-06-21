@@ -1,0 +1,43 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    
+    <script>
+
+        function calc(){
+            let n1 = document.getElementById("n1").value 
+            let n2 = document.getElementById("n2").value 
+
+            for (let i = n1; i <= n2; i++) { 
+                let a = 0;
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        a += 1;
+                        break; 
+                    }
+                }
+                if (a == 0 && i > 1) {
+                    document.getElementById("res").innerHTML += i + ', ';
+                }
+            }
+        }       
+
+    </script>
+
+</head>
+
+<body>
+   
+    Informe o intervalo entre 2 números: 
+    <br>
+    <br>
+    Menor número:<input type="number" id="n1"> &nbsp;
+    Maior número:<input type="number" id="n2">
+    <br>
+    <br>
+    <button onclick="calc()">=</button>
+    <br>
+    <br>
+    <label id="res">Os números primos são: </label>
+
+</body>

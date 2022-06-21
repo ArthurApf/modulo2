@@ -1,0 +1,32 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+
+    <script>
+
+        function calcula(){
+            let n1=document.getElementById("n1").value 
+            let array = n1.split('')
+                if (array[0] % 2 == 0){
+                    var number = ("par")
+                }
+                else {
+                    var number = ("ímpar")
+                }
+            document.getElementById('res').innerHTML=`O digito da centena ${array[0]}, é um número ${number} `
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    Insira 3 digitos: <input type="number" id="n1" placeholder="000" pattern="[0-9]{3}">
+    <button onclick="calcula()">=</button>
+    <br>        
+    <br>
+    <label id='res'></label>
+
+</body>
+</html>

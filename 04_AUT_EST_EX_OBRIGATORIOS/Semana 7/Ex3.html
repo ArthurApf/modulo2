@@ -2,34 +2,15 @@
     <!DOCTYPE html>
     <meta charset="UTF-8">
 
-    <script>
-       
-       function add(){
-        let n1 = parseFloat(document.getElementById("n1").value)
-        let maisUm = (n1+1)
-        document.getElementById("n1").value = maisUm
-       }
-
-      
-       function less(){
-        let n1 = parseFloat(document.getElementById("n1").value)
-        let menosUm = (n1-1)
-        document.getElementById("n1").value = menosUm
-        
-       }
-      
-
-    </script>
-
 
 </head>
 <body>
-
-<input type="number" id="n1">
-<br>
-<br>
-<button onclick="add()">+</button>
-<button onclick="less()">-</button>
-    
    
+    <form action="">
+        <p for="num">Seu numero:</p> 
+        <br>
+        <input type="tel" id="num" placeholder="(XX)XXXXX-XXXX" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}">
+        <input type="submit">
+    </form> 
+
 </body>
