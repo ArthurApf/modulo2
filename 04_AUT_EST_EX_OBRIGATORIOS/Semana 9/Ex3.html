@@ -1,0 +1,51 @@
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+
+    <script>
+
+        function ord(){
+            let t1 = document.getElementById("t1").value
+            let t2 = document.getElementById("t2").value
+            let t3 = document.getElementById("t3").value
+            let sort = [t1, t2, t3]
+            let bubbleSort = (sort) => {
+                let a = sort.length;
+                for (let i = 0; i < a; i++) {
+                    for (let w = 0; w < a; w++) {
+                        if (sort[w] > sort[w + 1]) {
+                            let t = sort[w];
+                            sort[w] = sort[w + 1];
+                            sort[w + 1] = t;
+                        }
+                    }
+                }
+                return sort;
+            };
+            bubbleSort(sort)
+            document.getElementById("res").innerHTML=sort
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+   
+    Nome 1:<input type="text" id="t1">
+    <br>
+    <br>
+    Nome 2:<input type="text" id="t2">
+    <br>
+    <br>
+    Nome 3:<input type="text" id="t3">
+    <br>
+    <br>
+    <button onclick="ord()">Ordena</button>
+    <br>
+    <br>
+    <label id="res"></label>
+
+</body>
+</html>
